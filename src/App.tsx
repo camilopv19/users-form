@@ -1,25 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, useRoutes } from "react-router-dom";
+import Steps from "./Users/Steps/Steps";
+import UsersList from "./Users/UsersList";
+
+// const mockUser = {
+//   id: '3',
+// firstName: 'Full-stack Engineer',
+// lastName: 'ethereum IRA',
+// email: 'engineer@ethereumira.com',
+// city: 'Los Santos',
+// country: 'USA',
+// dateOfBirth: '01/01/1666',
+// mobile: '800-245-8789'
+// };
+const RoutedApp: React.FC = () => {
+  let routes = useRoutes([
+    { path: "/", element: <Steps /> },
+    { path: ":step", element: <Steps /> },
+    { path: "/list", element: <UsersList /> },
+  ]);
+  return routes;
+};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <RoutedApp />
+      </Router>
+    </>
   );
 }
 
