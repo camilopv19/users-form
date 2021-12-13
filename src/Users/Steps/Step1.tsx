@@ -42,7 +42,7 @@ export const Step1: React.FC<Props> = ({ formChanged }) => {
         onChange={formChanged}
         value={ctx.userForm.email}
       />
-      <Link to="/2">Next</Link>
+      <Link data-testid="from1to2" to="/2">Next</Link>
     </>
   );
 };

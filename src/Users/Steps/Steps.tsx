@@ -58,7 +58,7 @@ const Steps = () => {
     <>
       <FormContext.Provider value={{userForm, setUserForm}}>
         <Card className={styles.input}>
-          <form onSubmit={addUser}>{step}</form>
+          <form data-testid="form" onSubmit={addUser}>{step}</form>
         </Card>
       </FormContext.Provider>
     </>

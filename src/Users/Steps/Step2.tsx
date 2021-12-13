@@ -31,8 +31,8 @@ export const Step2: React.FC<Props> = ({ formChanged }) => {
         onChange={formChanged}
         value={ctx.userForm.country}
       />
-      <Link to="/1">Back</Link>
-      <Link to="/3">Next</Link>
+      <Link data-testid="from2to1" to="/1">Back</Link>
+      <Link data-testid="from2to3" to="/3">Next</Link>
     </>
   );
 };

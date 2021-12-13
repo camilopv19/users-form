@@ -30,8 +30,8 @@ export const Step3: React.FC<Props> = ({ formChanged }) => {
         onChange={formChanged}
         value={ctx.userForm.mobile}
       />
-      <Link to='/2'>Back</Link>
-      <button type="submit">Save User</button>
+      <Link data-testid="from3to2" to='/2'>Back</Link>
+      <button data-testid="btnSaveUser" type="submit">Save User</button>
     </>
   );
 };
